@@ -5,7 +5,9 @@ import {
     Image,
     View
 } from 'react-native';
+
 import TabNavigator from 'react-native-tab-navigator';
+
 import PageOne from './pages/PageOne';
 import PageTwo from './pages/PageTwo';
 import PageThree from './pages/PageThree';
@@ -17,12 +19,13 @@ export default class TabNavigatorDemo extends Component {
             selectedTab: 'PageOne',
         }
     }
+
     render() {
         return (
             <TabNavigator
-                tabBarStyle={{ height: tabBarHeight, overflow: 'hidden' }}
-                sceneStyle={{ paddingBottom: tabBarHeight }}>
+               >
                 <TabNavigator.Item
+                    tabStyle={{paddingTop:4}}
                     selected={this.state.selectedTab === 'PageOne'}
                     title="PageOne"
                     renderIcon={() => <Image style={styles.tab_icon} source={require('../img/connection-1.png')}/>}
@@ -30,7 +33,9 @@ export default class TabNavigatorDemo extends Component {
                     onPress={() => this.setState({selectedTab: 'PageOne'})}>
                     <PageOne/>
                 </TabNavigator.Item>
+
                 <TabNavigator.Item
+                    tabStyle={{paddingTop:4}}
                     selected={this.state.selectedTab === 'PageTwo'}
                     title="PageTwo"
                     renderIcon={() => <Image style={styles.tab_icon} source={require('../img/flat.png')}/>}
@@ -40,6 +45,7 @@ export default class TabNavigatorDemo extends Component {
                 </TabNavigator.Item>
 
                 <TabNavigator.Item
+                    tabStyle={{paddingTop:4}}
                     selected={this.state.selectedTab === 'PageThree'}
                     title="PageThree"
                     renderIcon={() => <Image style={styles.tab_icon} source={require('../img/flat.png')}/>}
@@ -60,7 +66,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
     tab_icon: {
-        width: 32,
-        height: 32,
+        width: 28,
+        height: 28,
     }
 });

@@ -5,12 +5,17 @@ import {
     Text,
     View
 } from 'react-native';
-
+import TabTitle from '../TabTitle';
 export default class PageTwo extends Component {
     render() {
         return (
             < View style={styles.container}>
-                <Text style={{color:'blue'}}>PageTwo</Text>
+                <TabTitle title="Page Two"/>
+
+
+                <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                    <Text style={{color: 'blue', }}>PageTwo</Text>
+                </View>
             </View >
         );
     }
@@ -19,7 +24,7 @@ export default class PageTwo extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
