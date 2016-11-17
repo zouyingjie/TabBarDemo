@@ -6,7 +6,8 @@ import {
     View
 } from 'react-native';
 
-export default class TabTitle extends Component {
+export default class TabPageTitle extends Component {
+
     constructor(props) {
         super(props);
     }
@@ -15,21 +16,19 @@ export default class TabTitle extends Component {
         return (
             <View style={styles.tab_title}>
                 <Text style={{
-                    flex:1,
+                    flex: 1,
                     color: "#ffffff",
                     textAlignVertical: 'center',
                     textAlign: 'center',
                     fontSize: 22,
-                    paddingTop:16,
-                    paddingBottom:8,
-
+                    paddingTop: 16,
+                    paddingBottom: 8,
                 }}>{this.props.title}</Text>
             </View>
 
         );
     }
 }
-
 
 const styles = StyleSheet.create({
     tab_title: {

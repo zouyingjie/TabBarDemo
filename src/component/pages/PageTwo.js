@@ -5,16 +5,16 @@ import {
     Text,
     View
 } from 'react-native';
-import TabTitle from '../TabTitle';
+import TabPageTitle from '../TabPageTitle';
+
 export default class PageTwo extends Component {
+
     render() {
         return (
             < View style={styles.container}>
-                <TabTitle title="Page Two"/>
-
-
+                <TabPageTitle title="Page Two"/>
                 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={{color: 'blue', }}>PageTwo</Text>
+                    <Text style={{color: 'blue',}}>PageTwo</Text>
                 </View>
             </View >
         );

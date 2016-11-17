@@ -7,7 +7,6 @@ import {
     Navigator,
     View
 } from 'react-native';
-import TabNavigator from 'react-native-tab-navigator';
 import MainScene from './MainScene';
 
 
@@ -16,7 +15,6 @@ export default class App extends Component {
     constructor() {
         super();
     }
-
 
     render() {
         return (
