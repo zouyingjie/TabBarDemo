@@ -27,7 +27,6 @@ export default class TabNavigatorDemo extends Component {
                 tabBarStyle={{height: 56}}
                 hidesTabTouch={true}>
                 <TabNavigator.Item
-                    f4ea2a
                     selected={this.state.selectedTab === 'PageOne'}
                     title="WeChat"
                     titleStyle={{color: '#bfbfbf'}}

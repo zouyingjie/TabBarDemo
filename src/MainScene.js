@@ -8,6 +8,7 @@ import {
     View
 } from 'react-native';
 import TabNavigatorDemo from './component/TabNavigatorDemo';
+import ScrollTabDemo from './component/ScrollTabDemo';
 
 export default class MainScene extends Component {
     constructor(props) {
@@ -22,13 +23,20 @@ export default class MainScene extends Component {
         });
     }
 
+    goToScrollTab = () => {
+        this.props.navigator.push({
+            component: ScrollTabDemo,
+            scene: Navigator.SceneConfigs.FadeAndroid,
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <TouchableOpacity style={styles.touch} onPress={this.goToTabBar}>
                     <Text style={styles.touch_text}>Go To TabNavigatorDemo</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.touch}>
+                <TouchableOpacity style={styles.touch} onPress={this.goToScrollTab}>
                     <Text style={styles.touch_text}>Go To ScrollTabDemo</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.touch}>
